@@ -1,4 +1,4 @@
-# TextResolve.js
+![TextResolve.js](http://i.imgur.com/idmENZk.gif)
 
 Licenced under Do What the Fuck You Want to Public License.
 
