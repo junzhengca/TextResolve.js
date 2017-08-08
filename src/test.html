@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="textresolve.compiled.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Saira" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="title-text">TextResolve.js Demo Page</h1>
+      <p id="description">Futuristic text resolve animation plugin for JavaScript.</p>
+
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <p id="loop-true">So we beat on, boats against the current,</p>
+        </div>
+        <div class="panel-footer"><code>loop: true</code></div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <p id="loop-true-resolve-delay-10">So we beat on, boats against the current,</p>
+        </div>
+        <div class="panel-footer"><code>loop: true, resolveDelay: 10</code></div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <p id="loop-true-target-loop-10">So we beat on, boats against the current,</p>
+        </div>
+        <div class="panel-footer"><code>loop: true, targetLoop: 10</code></div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <p id="custom-character-pool">So we beat on, boats against the current,</p>
+        </div>
+        <div class="panel-footer"><code>custom character pool</code></div>
+      </div>
+    </div>
+    <p id="textresolve-demo"></p>
+  </body>
+</html>
+<script>
+  var loopTrueResolve = new TextResolve("loop-true", {
+    text: [
+      "So we beat on, boats against the current,",
+      "borne back ceaselessly into the past."
+    ],
+    loop: true
+  })
+
+  var loopTrueResolveDelay10Resolve = new TextResolve("loop-true-resolve-delay-10", {
+    text: [
+      "I hope she'll be a fool -- ",
+      "that's the best thing a girl can be in this world, a beautiful little fool."
+    ],
+    loop: true,
+    resolveDelay: 10
+  })
+
+  var loopTrueTargetLoop10Resolve = new TextResolve("loop-true-target-loop-10", {
+    text: [
+      "And so with the sunshine and the great bursts of leaves growing on the trees, just as things grow in fast movies, I had that familiar conviction that life was beginning over again with the summer."
+    ],
+    loop: true,
+    targetLoop: 10
+  })
+
+  var customCharacterPoolResolve = new TextResolve("custom-character-pool", {
+    text: [
+      "And I like large parties. They’re so intimate.",
+      "At small parties there isn’t any privacy."
+    ],
+    characterPool: [
+      "蛤",
+      "(",
+      "!",
+      "#",
+      "9",
+      "中",
+      "あ"
+    ],
+    targetLoop: 10,
+    resolveDelay: 50
+  })
+
+
+  var resolveTitle = new TextResolve("title-text", {
+    text: [
+      "TextResolve.js"
+    ],
+    delay: 1000,
+    loop: false,
+    targetLoop: 3,
+    resolveDelay: 100
+  });
+  var resolveDescription = new TextResolve("description", {
+    text: [
+      "Futuristic text resolve animation plugin for JavaScript."
+    ],
+    delay: 1000,
+    loop: false,
+    targetLoop: 2,
+    resolveDelay: 10
+  });
+</script>
+<style>
+  h1 {
+    font-family: 'Saira', sans-serif;
+    font-size: 50px;
+  }
+  #description {
+    font-family: 'Saira', sans-serif;
+    font-size: 20px;
+  }
+</style>
