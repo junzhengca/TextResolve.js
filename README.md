@@ -5,6 +5,7 @@ TextResolve.js is a futuristic text animation plugin.
 ## How to use
 
 1. Download the lastest copy.
+> Or use CDN `https://cdn.jsdelivr.net/gh/junthehacker/textresolve.js@v0.1.0/src/textresolve.compiled.js`
 2. Include `src/textresolve.compiled.js` in your page.
 3. Here is a simple demo:
 ```html
